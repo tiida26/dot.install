@@ -13,8 +13,17 @@
     <body>
 	<form action="survey.php" method="post">
 		<p>名前：<input type="text" name="name" size="60" maxlength="5"></p>
-		<p>メモ：<textarea name="name"></textarea></p>
-		<p>名前：<input type="submit" value="送信!"></p>
+		<p>メモ：<textarea name="memo"></textarea></p>
+		<p><input type="submit" value="送信!"></p>
+	</form>
+	<form action="survey.php" method="post">
+		<p>名前：<input type="text" name="name" required></p>
+		<p>パスワード：<input type="password" name="password"></p>
+		<p><input type="hidden" name="user_id" value="32"></p>
+		<p>日付：<input type="date" name="birthday"></p>
+		<p>URL：<input type="url" name="url"></p>
+		<p>email：<input type="email" name="email"></p>
+		<p><input type="submit" value="送信!"></p>
 	</form>
 	<img src="kiku.jpg" width="500" height="283" alt="菊の写真です" title="菊の写真">
 	<p>こんにちは。</p>
