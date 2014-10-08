@@ -12,12 +12,20 @@
     </head>
     <body>
 	<form action="survey.php" method="post">
+		<select name="color" size="5" multiple>
+			<option value="red">Red</option>
+			<option value="blue">Blue</option>
+			<option value="green">Green</option>
+		</select>
+		<p><input type="submit" value="送信!"></p>
+	</form>
+	<form action="survey.php" method="post">
 		Colors:
 		<label><input type="radio" name="color" value="red">Red</label>
 		<input type="radio" name="color" value="blue" id="blue"><label for="blue">Blue</label>
 		<input type="radio" name="color" value="green">Green
-	</form>
-	<form action="survey.php" method="post">
+	<p>
+	</p>
 		Colors:
 		<input type="checkbox" name="color" value="red">Red
 		<input type="checkbox" name="color" value="blue">Blue
