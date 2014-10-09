@@ -11,6 +11,21 @@
         <link rel="shortcut icon" href="favicon.ico">
     </head>
     <body>
+	<!--
+	スタイリング
+	div: 汎用ブロック要素（前後に改行が入る）
+	span: 汎用インライン要素（前後に改行が入らない）
+
+	id: その文書に一つだけの要素
+	class: 複数あってもよい
+	-->
+	<div id="main">
+	<p>こんにちは！こんにちは！</p>
+	<p>こんにちは！<span class="notice">こんにちは！</span></p>
+	</div>
+
+	<p>こんにちは！<span class="notice">こんにちは！</span></p>
+	<p>こんにちは！こんにちは！</p>
 	<form action="survey.php" method="post">
 		<select name="color" size="5" multiple>
 			<option value="red">Red</option>
