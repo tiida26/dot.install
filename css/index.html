@@ -4,9 +4,45 @@
 	<meta charaset="utf=8">
 	<title>CSSの練習</title>
 	<style>
-		h1 { color: red; }
+		/*
+			* 全てのセレクタ
+			a, b
+			a b
+			a > b
+			a + b
+			ab
+		*/
+
+		/*
+		* { color: red; } 全てのセレクタに対して
+		*/
+
+		/*
+		h1, h2 { color: red; } 複数のセレクタを選択できる
+		*/
+
+		/*
+		section .item { color: red; } セクションの下にある全てのitem(class)に対して
+		*/
+
+		/*
+		section > .item { color: red; } セクションの直下にあるitem(class)に対して
+		*/
+
+		/*
+		h2 + p { color: red; } h2 の 直後の p 要素に対して
+		*/
+
+		/*
+		p.item { color: red; } p 要素であってなおかつ class が item であるものに対して
+		*/
+
+		p { color: red; }
+
 	</style>
+	<!--
 	<link rel="stylesheet" href="default.css">
+	-->
 </head>
 <body>
 	<!--
@@ -35,7 +71,13 @@
 	</section>
 	<section id="sub">
 		<h2>見出し</h2>
+		<!--
 		<p style="color: green;">こんにちは！</p>
+		-->
+		<p>こんにちは！</p>
+		<p>こんにちは！</p>
+		<p>こんにちは！</p>
+		<p>こんにちは！</p>
 		<ul>
 			<li>item 1</li>
 			<li class="item">item 2</li>
