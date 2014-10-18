@@ -1,3 +1,5 @@
+<!-- セレクタの優先度について -->
+
 <!DOCTYPE html
 <html lang="ja">
 <head>
@@ -5,78 +7,27 @@
 	<title>CSSの練習</title>
 	<style>
 		/*
-			* 全てのセレクタ
-			a, b
-			a b
-			a > b
-			a + b
-			ab
+			- 後から書いた方が優先
+			- インラインで書いたほうが優先
+			- 詳細度の高い方が優先
+			- !important が最優先
+
+			#(100)
+			.(10)
+			要素(1)
 		*/
-
-		/*
-		* { color: red; } 全てのセレクタに対して
-		*/
-
-		/*
-		h1, h2 { color: red; } 複数のセレクタを選択できる
-		*/
-
-		/*
-		section .item { color: red; } セクションの下にある全てのitem(class)に対して
-		*/
-
-		/*
-		section > .item { color: red; } セクションの直下にあるitem(class)に対して
-		*/
-
-		/*
-		h2 + p { color: red; } h2 の 直後の p 要素に対して
-		*/
-
-		/*
-		p.item { color: red; } p 要素であってなおかつ class が item であるものに対して
-		*/
-
-		p { color: red; }
-
+		h1 { color: green !important; }			/* 1 */
+		#main h1 { color: red; }		/* 100 + 1 */
+		section#main h1 { color: yellow; }	/* 1 + 100 + 1 */
 	</style>
-	<!--
-	<link rel="stylesheet" href="default.css">
-	-->
 </head>
 <body>
-	<!--
-	セレクタ {
-		プロパティ: 値;
-		プロパティ: 値;
-		プロパティ: 値;
-
-	h1 {
-		/* コメント */
-		color: red;
-	}
-
-	要素 h1 p ul
-	id #main
-	class .item
-
-	- styleタグ
-	- インライン
-	- 外部ファイル
-
-	-->
 	<section id="main">
 		<h1>見出し</h1>
 		<p class="item">こんにちは！</p>
 	</section>
 	<section id="sub">
 		<h2>見出し</h2>
-		<!--
-		<p style="color: green;">こんにちは！</p>
-		-->
-		<p>こんにちは！</p>
-		<p>こんにちは！</p>
-		<p>こんにちは！</p>
 		<p>こんにちは！</p>
 		<ul>
 			<li>item 1</li>
