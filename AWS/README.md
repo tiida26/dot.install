@@ -1,13 +1,17 @@
-# �p��ɂ���
+# 用語について
+
 - EC2(Elastic Compute Cloud)
-���z�T�[�o�B`E`�̌��`C`��2������`EC2`�B
+
+仮想サーバ。`E`の後に`C`が2つだから`EC2`。
 
 
 - RDS(Relational Databese Service)
-�f�[�^�x�[�X�B���z�T�[�o����DB�𗧂��グ�Ă��ǂ����ADB�ɓ�������
 
-`RDS`�Ƃ����T�[�r�X�����莩���Ńo�b�N�A�b�v�Ȃǂ��Ƃ��Ă����̂ŕ֗��B
+データベース。仮想サーバ内でDBを立ち上げても良いが、DBに特化した
+
+`RDS`というサービスがあり自動でバックアップなどをとってくれるので便利。
 
 
 - S3(Simple Storage Service)
-�X�g���[�W�B
+
+ストレージ。
