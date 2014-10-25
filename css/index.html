@@ -6,17 +6,31 @@
     <style>
         /* Box Model */
         body, html {
-            height: 100%;    /* %指定の場合 height については明示的に指定する必要がある。 */
+            height: 100%;
+            margin: 0;
         }
         div {
+            border: red 5px solid;
             background: green;
-            width: 50%;    /* ピクセル指定も可能 */
+            width: 50%;
             height: 50%;
+            /*
+            1 -> all
+            2 -> top&botoom left&right
+            3 -> top left&right botoom
+            4-> top right bottom left
+            */
+            padding: 10px 20px 30px;
+            padding-left: 10px;
+            /*
+            margin も padding と使い方は同じ
+            */
+            margin-left: 20px;
         }
     </style>
 </head>
 <body>
-    <div>Box</div>
+    <div>Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box</div>
 </body>
 </html>
 
