@@ -4,33 +4,33 @@
     <meta charaset="utf=8">
     <title>CSSの練習</title>
     <style>
-        /* Box Model */
         body, html {
             height: 100%;
             margin: 0;
         }
         div {
-            border: red 5px solid;
             background: green;
-            width: 50%;
-            height: 50%;
+            width: 100px;
+            height: 100px;
             /*
-            1 -> all
-            2 -> top&botoom left&right
-            3 -> top left&right botoom
-            4-> top right bottom left
+            display
+            - block 前後に改行が入る
+            - inline 前後に改行が入らない(高さと幅の設定が解除)
+            - inline-block 前後に改行が入らない(高さと幅の設定が有効)
+            - none 表示されない
+            display: none;
+
+            overflow
+            - visible
+            - hidden
+            - scroll
             */
-            padding: 10px 20px 30px;
-            padding-left: 10px;
-            /*
-            margin も padding と使い方は同じ
-            */
-            margin-left: 20px;
+            overflow: scroll;
         }
     </style>
 </head>
 <body>
-    <div>Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box</div>
+    <div>Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box </div>
 </body>
 </html>
 
