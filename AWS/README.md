@@ -1,30 +1,30 @@
-# 用語について
+## 用語について
 
-## EC2(Elastic Compute Cloud)
+### EC2(Elastic Compute Cloud)
 
 仮想サーバ。`E`の後に`C`が2つだから`EC2`。
 
 
-## RDS(Relational Databese Service)
+### RDS(Relational Databese Service)
 
 データベース。仮想サーバ内でDBを立ち上げても良いが、DBに特化した
 
 `RDS`というサービスがあり自動でバックアップなどをとってくれるので便利。
 
 
-## S3(Simple Storage Service)
+### S3(Simple Storage Service)
 
 ストレージ。
 
 
-## リージョン
+### リージョン
 AWSのデータセンター的なものがある地域のこと
 
 
-## アベイラビリティーゾーン(A-Z)
+### アベイラビリティーゾーン(A-Z)
 AWSのデータセンター的なもの
 
 
-## EBS(Elastic Block Store)
+### EBS(Elastic Block Store)
 ブロックレベルのストレージボリューム。ディスクだと思って大丈夫。
 
