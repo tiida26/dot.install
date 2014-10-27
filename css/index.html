@@ -12,25 +12,32 @@
             background: green;
             width: 100px;
             height: 100px;
-            /*
-            display
-            - block 前後に改行が入る
-            - inline 前後に改行が入らない(高さと幅の設定が解除)
-            - inline-block 前後に改行が入らない(高さと幅の設定が有効)
-            - none 表示されない
-            display: none;
-
-            overflow
-            - visible
-            - hidden
-            - scroll
-            */
-            overflow: scroll;
+            position: relative;
         }
+        .label {
+            position: absolute;
+            /* top right left bottom */
+            bottom: -5px;
+            right: -5px;
+            font-size: 14px;
+            background: red;
+            padding: 2px 4px;
+            color: white;
+        }
+        /*
+        position
+        - static
+        - relative 親要素
+        - absolute 子要素
+        - fixed
+        */
     </style>
 </head>
 <body>
-    <div>Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box Box </div>
+    <div>
+        <span class="label">NEW!!</span>
+        Box
+    </div>
 </body>
 </html>
 
