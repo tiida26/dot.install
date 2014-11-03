@@ -4,21 +4,23 @@
     <meta charaset="utf=8">
     <title>CSSの練習</title>
     <style>
-        img {
-            float: right;
-        }
-        h2 {
-            clear: right;
-            /* left right both */
+        /*
+        list-style-type マーカーの種類 circle square katakana
+        list-style-position マーカーのいち outside inside
+        list-style-image
+        (typeを指定してからimageを指定するとimageのが優先される)
+        */
+        ul {
+            list-style: url('bg.png') outside;
         }
     </style>
 </head>
 <body>
-    <h1>見出し</h1>
-    <img src="bg.png">
-    <p>こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！</p>
-    <h2>見出し</h2>
-    <p>こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！</p>
+    <ul>
+        <li>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</li>
+        <li>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</li>
+        <li>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</li>
+    </ul>
 </body>
 </html>
 
