@@ -4,23 +4,14 @@
     <meta charaset="utf=8">
     <title>CSSの練習</title>
     <style>
-        /*
-        list-style-type マーカーの種類 circle square katakana
-        list-style-position マーカーのいち outside inside
-        list-style-image
-        (typeを指定してからimageを指定するとimageのが優先される)
-        */
-        ul {
-            list-style: url('bg.png') outside;
+        .change {
+            /* move, help, wait, pointer */
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <ul>
-        <li>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</li>
-        <li>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</li>
-        <li>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</li>
-    </ul>
+    <p>こんにちは。こんにちは。<span class="change">こんにちは</span>。</p>
 </body>
 </html>
 
