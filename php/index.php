@@ -1,18 +1,11 @@
 <?php
 
-// コメント
+// 変数 : 値につけるラベル
 
-echo "Hello World!"; // コメント
+// 英数字_が使える
+// $のあとの数字はだめ
+// 大文字小文字は区別される apple Apple
 
-/*
-コメント
-コメント
-コメント
-コメント
-*/
+$message = "Hello World!!";
 
-?>
-
-<html>
-<p>こんにちは！<?php echo "Hi!" ?></p>
-</html>
+echo $message;
