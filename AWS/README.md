@@ -41,3 +41,7 @@ RDSのインスタンス一覧から選択して、`詳細`から設定してい
 
 ### IAM(Identity and Access Management)
 ユーザ管理とかそんな感じのやつ
+
+
+### SDK(Software Development Kit)
+ソフトウェア開発キット。フレームワーク？みたいなものかな？AWS用にAWSがいろいろ用意しているようだ。
