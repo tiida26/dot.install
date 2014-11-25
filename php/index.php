@@ -1,35 +1,21 @@
 <?php
 
 // 条件分岐（if）
-// 比較演算子 < > <= >= == !=
-// 論理演算子 &&(AND) ||(OR) !(NOT)
+
+// 三項演算子（条件演算子）
 
 $age = 10;
+/*
 
 if ($age > 20) {
-    echo "大人！";
-} elseif ($age > 12) {
-    echo "子供！";
+    $message = "大人";
 } else {
-    echo "幼児！";
+    $message = "子供！";
 }
-
-
-/*
-if () {
-} else {
-}
-
-
-↓別の書き方
-if (): 
-else:
-endif;
 */
 
+$message = ($age > 20) ? "大人！" : "子供！" ;
+echo $message ;
 
-if ($age >20): echo "大人！";
-elseif ($age >12): echo "子供！";
-else: echo "幼児！";
-endif;
 
+// (条件) ? 処理１ : 処理２ ; で if～elseを表現することができる。
