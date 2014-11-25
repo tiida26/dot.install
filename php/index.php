@@ -1,21 +1,29 @@
 <?php
 
-// 条件分岐（if）
+// 条件分岐（switch）
 
-// 三項演算子（条件演算子）
+$signal = "green";
 
-$age = 10;
+switch ($signal) {
+    case "red":
+       echo "止まれ！";
+       break;
+    case "blue":
+    case "green":
+       echo "進め！";
+       break;
+    case "yellow":
+       echo "注意！";
+       break;
+    default:
+        // 例外処理
+       break:
+}
+
 /*
-
-if ($age > 20) {
-    $message = "大人";
-} else {
-    $message = "子供！";
+switch (変数？) {
+    case "条件":
+    処理;
+    break;
 }
 */
-
-$message = ($age > 20) ? "大人！" : "子供！" ;
-echo $message ;
-
-
-// (条件) ? 処理１ : 処理２ ; で if～elseを表現することができる。
