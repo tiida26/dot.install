@@ -1,29 +1,22 @@
 <?php
 
-// 条件分岐（switch）
+// ループ（while）
 
-$signal = "green";
-
-switch ($signal) {
-    case "red":
-       echo "止まれ！";
-       break;
-    case "blue":
-    case "green":
-       echo "進め！";
-       break;
-    case "yellow":
-       echo "注意！";
-       break;
-    default:
-        // 例外処理
-       break:
-}
+$i = 0;
 
 /*
-switch (変数？) {
-    case "条件":
-    処理;
-    break;
+// $i が10より小さい場合にechoした上で1つずつカウントする (前判定)
+while  ($i < 10) {
+    echo $i;
+    $i++;    // $i = $i + 1
 }
 */
+
+
+// do while(後判定)
+do {
+    echo $i;    // このプログラムの場合、$i が100とかでも最初のechoと++の処理は実行される
+    $i++;
+} while ($i < 10);
+
+
