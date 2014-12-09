@@ -1,31 +1,15 @@
 <?php
 
 // 関数
+// ローカル変数（変数のスコープ）
 
-// 引数: 関数を指定する時に()の中に指定する。んで実行するときにも()の中に指定する。
-// 戻り値
 
-function sayHi ($name) {
-	echo "Hi! $name";
+$myname = "ruby";
+
+function sayHi ($name = "taguchi") {
+        $myname = "php";    // ローカル変数 関数のコードブロック内で指定された変数はその関数内でのみ有効である
+	return "Hi! $name from $myname";
 }
 
-sayHi("taguchi");
-sayHi("tanaka");
-
-
-// 以下のように引数は初期値を与えることもできる。
-function SayHi2 ($name = "taguchi") {
-	echo "Hi $name";
-}
-
-sayHi2();
-sayHi2("tanaka");
-
-
-
-// 戻り値を指定する
-function SayHi3 ($name = "taguchi") {
-	return "Hi!!! $name";
-}
-
-echo sayHi3("yamada");
+echo sayHi();
+echo $myname;    // これ表示させようとしても、最初に定義した $myname = ruby の定義が出る
