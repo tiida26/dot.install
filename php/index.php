@@ -1,18 +1,19 @@
 <?php
 
-// 関数
+// 文字列に関する関数
 
-// ceil（小数点切り上げ） / floor（小数点切り捨て） / round（四捨五入） / pi（円周率） / rand（乱数）
+$s = "abcdefg";
 
-$x = 5.2;
+// strlen （文字列の長さを返してくれる）
+echo strlen($s);
 
-echo ceil($x);
-echo floor($x);
-echo round($x);
+// strpos （任意の文字が何文字目にあるか教えてくれる。ポジション。順番は 0 から始まることにちゅうい）
+echo strpos($s, "c");
 
-echo pi();
-echo "\n";
-echo mt_rand(1, 100);    // 最近では mt_rand を使うらしい
+// substr （任意のポジション以降の文字を表示させる。これも添字は 0 から始まっているのに注意）
+echo substr($s, 2, 2);    // $s の2番めから2文字 マイナスもできる。
 
+// str_replace （置換）
+echo str_replace("abc", "ABC", $s);
 
 
