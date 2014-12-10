@@ -1,15 +1,18 @@
 <?php
 
 // 関数
-// ローカル変数（変数のスコープ）
+
+// ceil（小数点切り上げ） / floor（小数点切り捨て） / round（四捨五入） / pi（円周率） / rand（乱数）
+
+$x = 5.2;
+
+echo ceil($x);
+echo floor($x);
+echo round($x);
+
+echo pi();
+echo "\n";
+echo mt_rand(1, 100);    // 最近では mt_rand を使うらしい
 
 
-$myname = "ruby";
 
-function sayHi ($name = "taguchi") {
-        $myname = "php";    // ローカル変数 関数のコードブロック内で指定された変数はその関数内でのみ有効である
-	return "Hi! $name from $myname";
-}
-
-echo sayHi();
-echo $myname;    // これ表示させようとしても、最初に定義した $myname = ruby の定義が出る
