@@ -1,19 +1,20 @@
 <?php
 
 // 文字列に関する関数
+// 日本語に対応させる (とりあえず関数に mb_ をつける的なあれ)
 
-$s = "abcdefg";
+$s = "あいうえお";
 
 // strlen （文字列の長さを返してくれる）
-echo strlen($s);
+// echo mb_strlen($s);
 
 // strpos （任意の文字が何文字目にあるか教えてくれる。ポジション。順番は 0 から始まることにちゅうい）
-echo strpos($s, "c");
+// echo mb_strpos($s, "う");
 
 // substr （任意のポジション以降の文字を表示させる。これも添字は 0 から始まっているのに注意）
-echo substr($s, 2, 2);    // $s の2番めから2文字 マイナスもできる。
+// echo mb_substr($s, 2, 2);    // $s の2番めから2文字 マイナスもできる。
 
 // str_replace （置換）
-echo str_replace("abc", "ABC", $s);
+// echo str_replace("abc", "ABC", $s);
 
 
