@@ -1,20 +1,21 @@
 <?php
 
 // 文字列に関する関数
-// 日本語に対応させる (とりあえず関数に mb_ をつける的なあれ)
+// printf
 
-$s = "あいうえお";
+$s = "banana";
+$n = 40;
+$p = 5.23;
 
-// strlen （文字列の長さを返してくれる）
-// echo mb_strlen($s);
+// "we have 40 bananas for $5.23"
 
-// strpos （任意の文字が何文字目にあるか教えてくれる。ポジション。順番は 0 から始まることにちゅうい）
-// echo mb_strpos($s, "う");
+// printf("we have %05d %ss for $%.2f", $n, $s, $p);
 
-// substr （任意のポジション以降の文字を表示させる。これも添字は 0 から始まっているのに注意）
-// echo mb_substr($s, 2, 2);    // $s の2番めから2文字 マイナスもできる。
+/*
+%d : 整数 %05d は5桁にそれろえる。無いところは0で埋める。
+%s : 文字列（strings）
+$f : 小数点（float） %.2f は小数点以下は2桁まで
+*/
 
-// str_replace （置換）
-// echo str_replace("abc", "ABC", $s);
-
-
+$result = sprintf("we have %05d %ss for $%.2f", $n, $s, $p);
+echo $result;
