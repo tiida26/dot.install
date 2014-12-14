@@ -1,21 +1,23 @@
 <?php
 
-// 文字列に関する関数
-// printf
+// 配列に関する関数
 
-$s = "banana";
-$n = 40;
-$p = 5.23;
+$members = array("tanaka", "sasaki", "kimura", "yoshida", "uchida");
 
-// "we have 40 bananas for $5.23"
+// count（要素の数を返す）
+echo count($members);
 
-// printf("we have %05d %ss for $%.2f", $n, $s, $p);
+// sort（要素をソートする）
+sort($members);
+var_dump($members);
 
-/*
-%d : 整数 %05d は5桁にそれろえる。無いところは0で埋める。
-%s : 文字列（strings）
-$f : 小数点（float） %.2f は小数点以下は2桁まで
-*/
+// in_array（配列の中にそれが入っているかどうか）
+if (in_array("tanaka", $members)){
+	echo "BINGO!";
+}
 
-$result = sprintf("we have %05d %ss for $%.2f", $n, $s, $p);
-echo $result;
+// implode（区切り文字を置き換える）/explode（任意の区切り文字で分解する）
+$atstr = implode("@", $members);
+var_dump(explode("@", $atstr));
+
+
