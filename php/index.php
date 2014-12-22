@@ -1,13 +1,23 @@
 <?php
 
-// 日付や時間に関する関数
+// ファイルの読み書き
 
-// Unixタイムスタンプ（1970/1/1 00:00:00からの経過秒数）
+$testFile = "test.dat";
+$contents = "こんにちは！";
 
-var_dump(time());    //現在の時間をUnixタイムで出す
-var_dump(mktime(7,55,0,6,7,2012));    // 2012/6/7 7:55:00 をUnixタイムにする
-var_dump(strtotime("2012/6/7 7:55:00"));    // 人が読めるっぽいやつをUnixタイムにする
-var_dump(strtotime("last Sunday"));    // 人が読めるっぽいやつをUnixタイムにする
-var_dump(strtotime("+ 2day"));    // 人が読めるっぽいやつをUnixタイムにする
+if (is_writable($testFile)) {
 
-echo date("Y-m-d H:i:s", strtotime("last Sunday"));    // 人が読めるっぽい感じで日時を出す
+    // ファイルをオープンできたか？
+
+    // 書き込めたか？
+
+    // 終了処理
+
+} else {
+    echo "not writable";
+    exit;
+}
+
+// is_writable: ファイルが書き込みできるかを true or false で返す関数
+// exit: プログラムを終了させる命令
+
