@@ -5,19 +5,27 @@
 $testFile = "test.dat";
 $contents = "こんにちは！";
 
+var_dump(is_writable($testFile));
+
 if (is_writable($testFile)) {
 
     // ファイルをオープンできたか？
     // $fp = fopen($testFile, "a");    // a はファイルの最後に書き込む。 w はファイルの最初から書き込む。最初から書き込むと上書きされてしまうらしい。
     if (!$fp = fopen($testFile, "a")) {    // fopen関数はうまくいったらファイルポインタリソースというのが返るらしい。そうでなければFALSEが返る。通常はこの返り値を変数に入れて処理をさせるらしい。
         echo "could not open!";
-        exit
+        exit;
     }
 
     // 書き込めたか？
-    fwrite($fp, $contents);
+    if (fwrite($fp, $contents) === false) {
+        echo "could not write!";
+        exit;
+    }
+
+    echo "success!";
 
     // 終了処理
+    fclose($fp);
 
 } else {
     echo "not writable";
