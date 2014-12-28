@@ -4,16 +4,12 @@
 
 $testFile = "test.dat";
 
+// $contents = file_get_contents($testFile);
 
-if (!$fp = fopen($testFile, "r")) {   // rwite の r
-    echo "could not open";
-    exit;
-}
+// $contents = file_get_contents("http://dotinstall.com/");    // URLを読み込むこともできる
 
-$contents = fread($fp, filesize($testFile));    // filesize($testFile) でファイルの最大サイズまで読み込む
+$contents = file($testFile);    // ファイルの内容を1行ずつ読み込む
 
 var_dump($contents);
-
-fclose($fp);
 
 
